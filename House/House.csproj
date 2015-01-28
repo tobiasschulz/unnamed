@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{000E7790-BBC2-4AE6-BE34-8BFE2FF223FD}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>House</RootNamespace>
     <AssemblyName>House</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -29,10 +29,134 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Framework\Core\Camera.cs" />
+    <Compile Include="Framework\Core\DisplayLayer.cs" />
+    <Compile Include="Framework\Core\DrawableScreenComponent.cs" />
+    <Compile Include="Framework\Core\GameCore.cs" />
+    <Compile Include="Framework\Core\IScreen.cs" />
+    <Compile Include="Framework\Core\IScreenComponent.cs" />
+    <Compile Include="Framework\Core\Screen.cs" />
+    <Compile Include="Framework\Core\ScreenComponent.cs" />
+    <Compile Include="Framework\Core\TypesafeEnum.cs" />
+    <Compile Include="Framework\Core\World.cs" />
+    <Compile Include="Framework\Development\DebugBoundings.cs" />
+    <Compile Include="Framework\Development\Profiler.cs" />
+    <Compile Include="Framework\Effects\IRenderEffect.cs" />
+    <Compile Include="Framework\Effects\IRenderEffectStack.cs" />
+    <Compile Include="Framework\Effects\InstancingEffect.cs" />
+    <Compile Include="Framework\Effects\RenderEffect.cs" />
+    <Compile Include="Framework\Effects\RenderEffectLibrary.cs" />
+    <Compile Include="Framework\Effects\RenderEffectStack.cs" />
+    <Compile Include="Framework\Effects\StandardEffect.cs" />
+    <Compile Include="Framework\Input\ClickState.cs" />
+    <Compile Include="Framework\Input\IKeyEventListener.cs" />
+    <Compile Include="Framework\Input\IMouseClickEventListener.cs" />
+    <Compile Include="Framework\Input\IMouseMoveEventListener.cs" />
+    <Compile Include="Framework\Input\IMouseScrollEventListener.cs" />
+    <Compile Include="Framework\Input\InputAction.cs" />
+    <Compile Include="Framework\Input\InputManager.cs" />
+    <Compile Include="Framework\Input\KeyBindingListener.cs" />
+    <Compile Include="Framework\Input\KeyEvent.cs" />
+    <Compile Include="Framework\Input\ModelMouseHandler.cs" />
+    <Compile Include="Framework\Input\MousePointer.cs" />
+    <Compile Include="Framework\Input\PlayerAction.cs" />
+    <Compile Include="Framework\Input\WidgetKeyHandler.cs" />
+    <Compile Include="Framework\Input\WidgetMouseHandler.cs" />
+    <Compile Include="Framework\Math\Angles3.cs" />
+    <Compile Include="Framework\Math\BoundingCylinder.cs" />
+    <Compile Include="Framework\Math\Bounds.cs" />
+    <Compile Include="Framework\Math\FrustumExtensions.cs" />
+    <Compile Include="Framework\Math\ModelExtensions.cs" />
+    <Compile Include="Framework\Math\RayExtensions.cs" />
+    <Compile Include="Framework\Math\ScreenPoint.cs" />
+    <Compile Include="Framework\Models\GameModel.cs" />
+    <Compile Include="Framework\Models\GameObject.cs" />
+    <Compile Include="Framework\Models\GameObjectDistance.cs" />
+    <Compile Include="Framework\Models\GamePrimitive.cs" />
+    <Compile Include="Framework\Models\IGameObject.cs" />
+    <Compile Include="Framework\Models\ModelColoring.cs" />
+    <Compile Include="Framework\Models\Sun.cs" />
+    <Compile Include="Framework\Platform\ContentLoader.cs" />
+    <Compile Include="Framework\Platform\Dependencies.cs" />
+    <Compile Include="Framework\Platform\Log.cs" />
+    <Compile Include="Framework\Platform\SystemInfo-MG.cs" />
+    <Compile Include="Framework\Platform\SystemInfo.cs" />
+    <Compile Include="Framework\Primitives\CurvedCylinder.cs" />
+    <Compile Include="Framework\Primitives\Cylinder.cs" />
+    <Compile Include="Framework\Primitives\Parallelogram.cs" />
+    <Compile Include="Framework\Primitives\Primitive.cs" />
+    <Compile Include="Framework\Primitives\Sphere.cs" />
+    <Compile Include="Framework\Primitives\Star.cs" />
+    <Compile Include="Framework\Primitives\Torus.cs" />
+    <Compile Include="Framework\Screens\ErrorScreen.cs" />
+    <Compile Include="Framework\Storage\BooleanOption.cs" />
+    <Compile Include="Framework\Storage\Config.cs" />
+    <Compile Include="Framework\Storage\ConfigFile.cs" />
+    <Compile Include="Framework\Storage\DistinctOption.cs" />
+    <Compile Include="Framework\Storage\FileAlreadyExistsException.cs" />
+    <Compile Include="Framework\Storage\FileUtility.cs" />
+    <Compile Include="Framework\Storage\FloatOption.cs" />
+    <Compile Include="Framework\Storage\IniFile.cs" />
+    <Compile Include="Framework\Storage\KeyOption.cs" />
+    <Compile Include="Framework\Storage\Language.cs" />
+    <Compile Include="Framework\Storage\LanguageOption.cs" />
+    <Compile Include="Framework\Storage\Localizer.cs" />
+    <Compile Include="Framework\Storage\NoFilenameException.cs" />
+    <Compile Include="Framework\Storage\Option.cs" />
+    <Compile Include="Framework\Storage\RenderEffectOption.cs" />
+    <Compile Include="Framework\Utilities\ColorHelper.cs" />
+    <Compile Include="Framework\Utilities\DictionaryExtensions.cs" />
+    <Compile Include="Framework\Utilities\EnumHelper.cs" />
+    <Compile Include="Framework\Utilities\TextHelper.cs" />
+    <Compile Include="Framework\Utilities\VectorHelper.cs" />
+    <Compile Include="Framework\Widgets\Border.cs" />
+    <Compile Include="Framework\Widgets\Button.cs" />
+    <Compile Include="Framework\Widgets\CheckBox.cs" />
+    <Compile Include="Framework\Widgets\ComboBox.cs" />
+    <Compile Include="Framework\Widgets\ConfirmDialog.cs" />
+    <Compile Include="Framework\Widgets\Container.cs" />
+    <Compile Include="Framework\Widgets\Design.cs" />
+    <Compile Include="Framework\Widgets\Dialog.cs" />
+    <Compile Include="Framework\Widgets\ErrorDialog.cs" />
+    <Compile Include="Framework\Widgets\HorizontalAlignment.cs" />
+    <Compile Include="Framework\Widgets\IDesign.cs" />
+    <Compile Include="Framework\Widgets\InputItem.cs" />
+    <Compile Include="Framework\Widgets\Lines.cs" />
+    <Compile Include="Framework\Widgets\Menu.cs" />
+    <Compile Include="Framework\Widgets\MenuEntry.cs" />
+    <Compile Include="Framework\Widgets\MenuItem.cs" />
+    <Compile Include="Framework\Widgets\SliderItem.cs" />
+    <Compile Include="Framework\Widgets\TextBox.cs" />
+    <Compile Include="Framework\Widgets\TextItem.cs" />
+    <Compile Include="Framework\Widgets\VerticalAlignment.cs" />
+    <Compile Include="Framework\Widgets\Widget.cs" />
+    <Compile Include="Framework\Widgets\WidgetState.cs" />
+    <Compile Include="Knot3.VisualTests\Program.cs" />
+    <Compile Include="Knot3.VisualTests\VisualTestsGame.cs" />
+    <Compile Include="Knot3.VisualTests\VisualTestsScreen.cs" />
+    <Compile Include="Framework\Effects\RenderEffectLibrary-XNA.cs" />
+    <Compile Include="Framework\Platform\ContentLoader-XNA.cs" />
+    <Compile Include="Framework\Widgets\HfGDesign.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Framework\" />
+    <Folder Include="Knot3.VisualTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Thirdparty\FNA\FNA.csproj">
+      <Project>{35253CE1-C864-4CD3-8249-4D1319748E8F}</Project>
+      <Name>FNA</Name>
+    </ProjectReference>
+    <ProjectReference Include="ThirdParty.Shell.Common\ThirdParty.Shell.Common.csproj">
+      <Project>{0149A7A9-E47C-4B94-9D0B-38E42600F74C}</Project>
+      <Name>ThirdParty.Shell.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

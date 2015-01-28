@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0149A7A9-E47C-4B94-9D0B-38E42600F74C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ThirdParty.Shell.Common</RootNamespace>
+    <AssemblyName>ThirdParty.Shell.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Program.cs">
+      <Link>Shell.Common\Program.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Hooks\Hook.cs">
+      <Link>Shell.Common\Hooks\Hook.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\ConfigFile.cs">
+      <Link>Shell.Common\IO\ConfigFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\Downloader.cs">
+      <Link>Shell.Common\IO\Downloader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\FileSystem.cs">
+      <Link>Shell.Common\IO\FileSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\FileSystemType.cs">
+      <Link>Shell.Common\IO\FileSystemType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\FileSystemUtilities.cs">
+      <Link>Shell.Common\IO\FileSystemUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\HexString.cs">
+      <Link>Shell.Common\IO\HexString.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\IniFile.cs">
+      <Link>Shell.Common\IO\IniFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\Log.cs">
+      <Link>Shell.Common\IO\Log.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\LogColor.cs">
+      <Link>Shell.Common\IO\LogColor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\NetworkHelper.cs">
+      <Link>Shell.Common\IO\NetworkHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\ProgressBar.cs">
+      <Link>Shell.Common\IO\ProgressBar.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\ShellCharacters.cs">
+      <Link>Shell.Common\IO\ShellCharacters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\TableParserExtensions.cs">
+      <Link>Shell.Common\IO\TableParserExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\TaggedLog.cs">
+      <Link>Shell.Common\IO\TaggedLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\UserChoice.cs">
+      <Link>Shell.Common\IO\UserChoice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\UserChoiceExtensions.cs">
+      <Link>Shell.Common\IO\UserChoiceExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\IO\UserChoices.cs">
+      <Link>Shell.Common\IO\UserChoices.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Tasks\ConfigurableObject.cs">
+      <Link>Shell.Common\Tasks\ConfigurableObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Tasks\IConfigurable.cs">
+      <Link>Shell.Common\Tasks\IConfigurable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Tasks\Library.cs">
+      <Link>Shell.Common\Tasks\Library.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Tasks\MainScriptTask.cs">
+      <Link>Shell.Common\Tasks\MainScriptTask.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Tasks\MonoOptionsScriptTask.cs">
+      <Link>Shell.Common\Tasks\MonoOptionsScriptTask.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Tasks\ScriptTask.cs">
+      <Link>Shell.Common\Tasks\ScriptTask.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\Actions.cs">
+      <Link>Shell.Common\Util\Actions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\CollectionExtensions.cs">
+      <Link>Shell.Common\Util\CollectionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\Commons.cs">
+      <Link>Shell.Common\Util\Commons.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\CustomParallel.cs">
+      <Link>Shell.Common\Util\CustomParallel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\DateTimeExtensions.cs">
+      <Link>Shell.Common\Util\DateTimeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\Filter.cs">
+      <Link>Shell.Common\Util\Filter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\NetworkUtils.cs">
+      <Link>Shell.Common\Util\NetworkUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\StringUtils.cs">
+      <Link>Shell.Common\Util\StringUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\SystemInfo.cs">
+      <Link>Shell.Common\Util\SystemInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\ThreadingUtils.cs">
+      <Link>Shell.Common\Util\ThreadingUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\TimeSpanExtension.cs">
+      <Link>Shell.Common\Util\TimeSpanExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Common\Util\ValueObject.cs">
+      <Link>Shell.Common\Util\ValueObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Mono.Options\Options.cs">
+      <Link>Mono.Options\Options.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Compatibility\FileHelper.cs">
+      <Link>Shell.Compatibility\FileHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Thirdparty\shell\Shell\Shell.Common\Shell.Compatibility\SystemHelper.cs">
+      <Link>Shell.Compatibility\SystemHelper.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Shell.Common\" />
+    <Folder Include="Mono.Options\" />
+    <Folder Include="Shell.Compatibility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
